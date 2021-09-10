@@ -194,11 +194,11 @@ BAIDU_NOTIFY_URL = os.environ.get('DJANGO_BAIDU_NOTIFY_URL') \
 
 # Email:
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = env_to_bool('DJANGO_EMAIL_TLS', False)
-EMAIL_USE_SSL = env_to_bool('DJANGO_EMAIL_SSL', True)
-EMAIL_HOST = os.environ.get('DJANGO_EMAIL_HOST') or 'smtp.mxhichina.com'
-EMAIL_PORT = int(os.environ.get('DJANGO_EMAIL_PORT') or 465)
-EMAIL_HOST_USER = os.environ.get('DJANGO_EMAIL_USER')
+EMAIL_USE_TLS = env_to_bool('DJANGO_EMAIL_TLS', True)
+EMAIL_USE_SSL = env_to_bool('DJANGO_EMAIL_SSL', False)
+EMAIL_HOST = os.environ.get('DJANGO_EMAIL_HOST') or 'smtp.qq.com'
+EMAIL_PORT = int(os.environ.get('DJANGO_EMAIL_PORT') or 587)
+EMAIL_HOST_USER = os.environ.get('DJANGO_EMAIL_USER', "1308187736@qq.com")
 EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_PASSWORD')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = EMAIL_HOST_USER
